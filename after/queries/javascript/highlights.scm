@@ -2,6 +2,6 @@
 ;; extends
 
 (function_declaration
-  name: (identifier) @y9nika.definition)
+  name: (identifier) @y9nika.declaration)
 
-(undefined) @y9nika.local
+(undefined) @y9nika.variable

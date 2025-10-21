@@ -3,4 +3,4 @@
 
 (defun
   (defun_header
-    function_name: (sym_lit) @y9nika.definition))
+    function_name: (sym_lit) @y9nika.declaration))

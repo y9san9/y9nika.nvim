@@ -2,10 +2,10 @@
 ;; extends
 
 (class_declaration
-  name: (identifier) @y9nika.definition)
+  name: (identifier) @y9nika.declaration)
 (constructor_declaration
-  name: (identifier) @y9nika.definition)
+  name: (identifier) @y9nika.declaration)
 (method_declaration
-  name: (identifier) @y9nika.definition)
+  name: (identifier) @y9nika.declaration)
 (package_declaration
-  (scoped_identifier) @y9nika.definition)
+  (scoped_identifier) @y9nika.declaration)

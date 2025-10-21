@@ -3,8 +3,8 @@
 
 (Decl
   (VarDecl
-    variable_type_function: (IDENTIFIER) @y9nika.definition
+    variable_type_function: (IDENTIFIER) @y9nika.declaration
     (ErrorUnionExpr)))
 
 (FnProto
-  function: (IDENTIFIER) @y9nika.definition)
+  function: (IDENTIFIER) @y9nika.declaration)

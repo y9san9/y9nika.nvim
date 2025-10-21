@@ -3,4 +3,4 @@
 
 (object
   (pair
-    key: (string) @y9nika.local))
+    key: (string) @y9nika.variable))

@@ -3,18 +3,23 @@
 y9nika is my wife's nickname. This repo is a companion theme for my config at
 [y9san9.nvim](https://github.com/y9san9/y9san9.nvim).
 
+| Dark                        | Light                        |
+| --------------------------- | ---------------------------- |
+| ![](assets/kotlin-dark.png) | ![](assets/kotlin-light.png) |
+
 ## Motivation
 
 Most color schemes highlight everything they can, ending up looking like a
 fireworks show. That's fine for most of the people and it feels fancy. But it
 doesn't help to improve builtin human parser for stuff.
 
-This colorscheme splits all the code into 2 categories:
+This colorscheme splits all the code into 3 categories:
 
 * Declarations
 * Statements
+* Junk
 
-This colorscheme only highlights declarations. There is not reason to highlight
+This colorscheme only highlights declarations. There is no reason to highlight
 statements since all the code is basically them. You will need to study them
 one-by-one anyways. But when searching for a declaration with your eye,
 highlighting might draw attention.
@@ -27,23 +32,23 @@ Only 3 classes of declarations are supported:
 
 Locals are defined within scope and are not accessible once this scope is left.
 The scope might be a function, loop, if condition or something else. Local
-variables and constants are all highlighted using `@y9nika.local`.
+variables and constants are all highlighted using `@y9nika.variable`.
 
 Definition is something that is defined within namespace and is attached to it,
 rather than to scope. They are more important and therefore more noticeable.
 Functions, classes, interfaces, global variables, it all falls under that
-category and highlighted using `@y9nika.definition`.
+category and highlighted using `@y9nika.declaration`.
 
 And comments are just... Comments. There is a trend to dim comments in nearly
 every colorscheme. In my opinion if author of the original code wanted to say
 you something, it should be noticeable. Perhaps that is the most important and
-high-level information. It is highlighted using `@y9nika.comment`.
+high-level information. It is highlighted using `@y9nika.marker`.
 
 Additionally:
 
-- y9nika.nvim does not highlight standard language keywords (if, else,
-  function, etc). They are usually least important and most obvious part of any
-  program.
+- y9nika.nvim reduces visibility of punctuation and standard language keywords
+  (if, else, function, etc). They are usually least important and most obvious
+  part of any program.
 
 - y9nika.nvim doesn’t use font variations. It’s hard to scan code when it jumps
   between normal, **bold** and *italics* all the time. Also, not all fonts
@@ -78,14 +83,12 @@ set termguiclors
 colorscheme y9nika
 ```
 
+Supported languages:
+
+- [x] Kotlin
+
 ## Configuration
 
 No custom configuration is supported by design. It is an opinionated theme,
 either make your fork or open an issue.
-
-## Screenshots
-
-Kotlin
-![kotlin-dark]
-![kotlin-light]
 

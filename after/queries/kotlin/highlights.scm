@@ -2,31 +2,24 @@
 ;; extends
 
 (object_declaration
-  (type_identifier) @y9nika.definition)
+  (type_identifier) @y9nika.declaration)
 
 (parameter
-  (simple_identifier) @y9nika.local)
+  (simple_identifier) @y9nika.variable)
 
 (variable_declaration
-  (simple_identifier) @y9nika.local)
+  (simple_identifier) @y9nika.variable)
 
 (class_parameter
-  (simple_identifier) @y9nika.local)
+  (simple_identifier) @y9nika.variable)
 
-(string_literal) @y9nika.local
+(line_comment) @y9nika.marker
 
-(boolean_literal) @y9nika.local
-(integer_literal) @y9nika.local
-(long_literal) @y9nika.local
-(unsigned_literal) @y9nika.local
-(real_literal) @y9nika.local
-
-(line_comment) @Comment
-(multiline_comment) @Comment
+(multiline_comment) @y9nika.marker
 
 (function_declaration
-  (simple_identifier) @y9nika.definition)
+  (simple_identifier) @y9nika.declaration)
 
 (class_declaration
-  (type_identifier) @y9nika.definition)
+  (type_identifier) @y9nika.declaration)
 
