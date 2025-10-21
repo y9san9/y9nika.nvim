@@ -2,19 +2,19 @@
 ;; extends
 
 (interface_declaration
-  name: (type_identifier) @AlabasterDefinition)
+  name: (type_identifier) @y9nika.definition)
 
 (method_definition
-  name: (property_identifier) @AlabasterDefinition)
+  name: (property_identifier) @y9nika.definition)
 
 (function_declaration
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @y9nika.definition)
 
 (variable_declarator
-  name: (identifier) @AlabasterDefinition
+  name: (identifier) @y9nika.definition
   value: (arrow_function))
 
 (type_alias_declaration
-  name: (type_identifier) @AlabasterDefinition)
+  name: (type_identifier) @y9nika.definition)
 
-(undefined) @AlabasterConstant
+(undefined) @y9nika.local

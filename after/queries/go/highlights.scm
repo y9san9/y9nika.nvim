@@ -2,14 +2,14 @@
 ;; extends
 
 (package_clause
-  (package_identifier) @AlabasterDefinition)
+  (package_identifier) @y9nika.definition)
 
 (const_declaration
   (const_spec
-    name: (identifier) @AlabasterDefinition))
+    name: (identifier) @y9nika.definition))
 
 (function_declaration
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @y9nika.definition)
 
 (method_declaration
-  name: (field_identifier) @AlabasterDefinition)
+  name: (field_identifier) @y9nika.definition)

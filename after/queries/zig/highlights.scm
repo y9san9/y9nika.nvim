@@ -3,8 +3,8 @@
 
 (Decl
   (VarDecl
-    variable_type_function: (IDENTIFIER) @AlabasterDefinition
+    variable_type_function: (IDENTIFIER) @y9nika.definition
     (ErrorUnionExpr)))
 
 (FnProto
-  function: (IDENTIFIER) @AlabasterDefinition)
+  function: (IDENTIFIER) @y9nika.definition)

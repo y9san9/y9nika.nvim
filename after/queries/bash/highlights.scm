@@ -2,7 +2,4 @@
 ;; extends
 
 (function_definition
-  name: (word) @AlabasterDefinition)
-
-((program . (comment) @AlabasterHashbang)
- (#match? @AlabasterHashbang "^#!/"))
+  name: (word) @y9nika.definition)

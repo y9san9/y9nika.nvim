@@ -3,7 +3,7 @@
 
 (function_declaration
   name: (identifier
-          (name) @AlabasterDefinition))
+          (name) @y9nika.definition))
 
 (type_declaration
-  (type_bindings (identifier (name) @AlabasterDefinition)))
+  (type_bindings (identifier (name) @y9nika.definition)))

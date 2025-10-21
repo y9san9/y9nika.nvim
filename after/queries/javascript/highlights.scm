@@ -2,6 +2,6 @@
 ;; extends
 
 (function_declaration
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @y9nika.definition)
 
-(undefined) @AlabasterConstant
+(undefined) @y9nika.local

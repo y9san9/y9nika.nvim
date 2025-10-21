@@ -2,15 +2,13 @@
 ;; extends
 
 (function_definition
-  name: (word) @AlabasterDefinition)
+  name: (word) @y9nika.definition)
 
 (command
   name: (word) @function.builtin
   (#match? @function.builtin "^set$")
   argument: (word) @parameter
   (#any-of? @parameter "-g" "--global" "-U" "--universal" "-x" "--export")
-  argument: (word) @AlabasterDefinition
+  argument: (word) @y9nika.definition
   argument: (_))
 
-((program . (comment) @AlabasterHashbang)
- (#match? @AlabasterHashbang "^#!/"))

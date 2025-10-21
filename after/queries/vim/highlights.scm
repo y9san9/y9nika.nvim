@@ -5,8 +5,8 @@
   (function_declaration
     name: (scoped_identifier
             (scope)
-            (identifier) @AlabasterDefinition)))
+            (identifier) @y9nika.definition)))
 
 (function_definition
   (function_declaration
-    name: (identifier) @AlabasterDefinition))
+    name: (identifier) @y9nika.definition))

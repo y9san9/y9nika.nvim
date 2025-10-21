@@ -2,19 +2,19 @@
 ;; extends
 
 (package_clause
-  (package_identifier) @AlabasterDefinition)
+  (package_identifier) @y9nika.definition)
 
 (function_definition
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @y9nika.definition)
 
 (function_declaration
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @y9nika.definition)
 
 (class_definition
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @y9nika.definition)
 
 (object_definition
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @y9nika.definition)
 
 (trait_definition
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @y9nika.definition)

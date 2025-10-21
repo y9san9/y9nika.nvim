@@ -2,12 +2,9 @@
 ;; extends
 
 (function_definition
-  name: (identifier) @AlabasterDefinition)
+  name: (identifier) @y9nika.definition)
 (class_definition
-  name: (identifier) @AlabasterDefinition)
-
-((module . (comment) @AlabasterHashbang)
- (#match? @AlabasterHashbang "^#!/"))
+  name: (identifier) @y9nika.definition)
 
 (decorator
-  (identifier) @AlabasterBase)
+  (identifier) @y9nika.base)

@@ -3,7 +3,7 @@ if vim.fn.exists("syntax_on") == 1 then
     vim.cmd("syntax reset")
 end
 
-vim.g.colors_name = "alabaster"
+vim.g.colors_name = "y9nika"
 
 local theme
 ---@diagnostic disable: undefined-global
@@ -60,14 +60,13 @@ if vim.o.background == "dark" then
         white = "#cecece",
         yellow = "#cd974b",
     }
-    local comment_fg = vim.g.alabaster_dim_comments and dim_comment or comment
+    local comment_fg = comment
     local pmenu_bg = "#182325"
-    local float_bg = vim.g.alabaster_floatborder and bg or pmenu_bg
-    local floatborder = vim.g.alabaster_floatborder and { bg = bg, fg = "#333333" }
-        or {
-            bg = float_bg,
-            fg = float_bg,
-        }
+    local float_bg = pmenu_bg
+    local floatborder = {
+        bg = float_bg,
+        fg = float_bg,
+    }
     theme = {
         Comment = { fg = comment_fg },
         ColorColumn = { bg = "#182325" },
@@ -276,12 +275,12 @@ if vim.o.background == "dark" then
         ["@text.warning"] = { bg = "#d0d058", fg = bg },
 
         --- Theme specific
-        ["@AlabasterBase"] = { fg = ansi.white },
-        ["@AlabasterConstant"] = { fg = const_fg },
-        ["@AlabasterDefinition"] = { fg = def_fg },
-        ["@AlabasterPunct"] = { fg = punct_fg },
-        ["@AlabasterString"] = { fg = string_fg },
-        ["@AlabasterHashbang"] = { fg = dim_comment },
+        ["@y9nika.base"] = { fg = ansi.white },
+        ["@y9nika.constant"] = { fg = const_fg },
+        ["@y9nika.definition"] = { fg = def_fg },
+        ["@y9nika.punct"] = { fg = punct_fg },
+        ["@y9nika.string"] = { fg = string_fg },
+        ["@y9nika.hashbang"] = { fg = dim_comment },
         --- Gitsigns
         GitSignsAdd = { fg = diffadd },
         GitSignsChange = { fg = diffchange },
@@ -331,16 +330,16 @@ if vim.o.background == "dark" then
         --- vim-matchup
         MatchupVirtualText = { fg = ansi.yellow },
         --- For `highlight link`
-        AlabasterBlack = { fg = ansi.black },
-        AlabasterBlue = { fg = ansi.blue },
-        AlabasterBrightYellow = { fg = ansi.brightyellow },
-        AlabasterCyan = { fg = ansi.cyan },
-        AlabasterGreen = { fg = ansi.green },
-        AlabasterDarkGreen = { fg = "#6abf40" },
-        AlabasterMagenta = { fg = ansi.magenta },
-        AlabasterRed = { fg = ansi.red },
-        AlabasterWhite = { fg = ansi.white },
-        AlabasterYellow = { fg = ansi.yellow },
+        ["y9nika.black"] = { fg = ansi.black },
+        ["y9nika.blue"] = { fg = ansi.blue },
+        ["y9nika.brightyellow"] = { fg = ansi.brightyellow },
+        ["y9nika.cyan"] = { fg = ansi.cyan },
+        ["y9nika.green"] = { fg = ansi.green },
+        ["y9nika.darkGreen"] = { fg = "#6abf40" },
+        ["y9nika.magenta"] = { fg = ansi.magenta },
+        ["y9nika.red"] = { fg = ansi.red },
+        ["y9nika.white"] = { fg = ansi.white },
+        ["y9nika.yellow"] = { fg = ansi.yellow },
         --- Hop
         HopNextKey = { fg = ansi.brightyellow },
         HopNextKey1 = { fg = ansi.cyan },
@@ -369,21 +368,21 @@ if vim.o.background == "dark" then
         --- nvim-dap-virtual-text
         NvimDapVirtualText = { bg = "#1d292b", fg = ansi.cyan },
         --- Noice
-        NoiceCmdlineIcon = { link = "AlabasterDarkGreen" },
-        NoiceCmdlinePopupBorder = { link = "AlabasterDarkGreen" },
-        NoiceConfirmBorder = { link = "AlabasterDarkGreen" },
-        NoiceCmdlinePopupBorderCmdline = { link = "AlabasterDarkGreen" },
-        NoiceCmdlineIconCmdline = { link = "AlabasterDarkGreen" },
-        NoiceCmdlinePopupBorderFilter = { link = "AlabasterDarkGreen" },
-        NoiceCmdlineIconFilter = { link = "AlabasterDarkGreen" },
-        NoiceCmdlinePopupBorderLua = { link = "AlabasterDarkGreen" },
-        NoiceCmdlineIconLua = { link = "AlabasterDarkGreen" },
-        NoiceCmdlinePopupBorderSearch = { link = "AlabasterYellow" },
-        NoiceCmdlineIconSearch = { link = "AlabasterYellow" },
+        NoiceCmdlineIcon = { link = "@y9nika.darkGreen" },
+        NoiceCmdlinePopupBorder = { link = "@y9nika.darkGreen" },
+        NoiceConfirmBorder = { link = "@y9nika.darkGreen" },
+        NoiceCmdlinePopupBorderCmdline = { link = "@y9nika.darkGreen" },
+        NoiceCmdlineIconCmdline = { link = "@y9nika.darkGreen" },
+        NoiceCmdlinePopupBorderFilter = { link = "@y9nika.darkGreen" },
+        NoiceCmdlineIconFilter = { link = "@y9nika.darkGreen" },
+        NoiceCmdlinePopupBorderLua = { link = "@y9nika.darkGreen" },
+        NoiceCmdlineIconLua = { link = "@y9nika.darkGreen" },
+        NoiceCmdlinePopupBorderSearch = { link = "@y9nika.yellow" },
+        NoiceCmdlineIconSearch = { link = "@y9nika.yellow" },
         -- Languages
         --- asm
         asmDirective = { fg = dim_comment },
-        nasmLabel = { link = "@AlabasterDefinition" },
+        nasmLabel = { link = "@y9nika.definition" },
     }
 else
     -- terminal colors
@@ -439,14 +438,13 @@ else
     local warn = "#BC7500"
     local hint = ansi.blue
     local info = "#278C00"
-    local comment_fg = vim.g.alabaster_dim_comments and dim_comment or comment
+    local comment_fg = comment
     local pmenu_bg = "#e7e7e7"
-    local float_bg = vim.g.alabaster_floatborder and bg or pmenu_bg
-    local floatborder = vim.g.alabaster_floatborder and { bg = bg, fg = "#999999" }
-        or {
-            bg = float_bg,
-            fg = float_bg,
-        }
+    local float_bg = pmenu_bg
+    local floatborder = {
+        bg = float_bg,
+        fg = float_bg,
+    }
     theme = {
         Comment = { fg = comment_fg },
         ColorColumn = { bg = "#E2EEEE" },
@@ -655,11 +653,11 @@ else
         ["@text.warning"] = { bg = "#FFDEAA", fg = ansi.blue },
 
         --- Theme specific
-        ["@AlabasterConstant"] = { fg = const_fg },
-        ["@AlabasterDefinition"] = { fg = def_fg },
-        ["@AlabasterPunct"] = { fg = punct_fg },
-        ["@AlabasterString"] = { fg = string_fg },
-        ["@AlabasterHashbang"] = { fg = dim_comment },
+        ["@y9nika.constant"] = { fg = const_fg },
+        ["@y9nika.definition"] = { fg = def_fg },
+        ["@y9nika.punctuation"] = { fg = punct_fg },
+        ["@y9nika.string"] = { fg = string_fg },
+        ["@y9nika.hashbang"] = { fg = dim_comment },
         --- Gitsigns
         GitSignsAdd = { fg = "#6abf40" },
         GitSignsChange = { fg = diffchange },
@@ -707,16 +705,16 @@ else
         --- vim-matchup
         MatchupVirtualText = { fg = ansi.yellow },
         --- For `highlight link`
-        AlabasterBlack = { fg = ansi.black },
-        AlabasterBlue = { fg = ansi.blue },
-        AlabasterBrightYellow = { fg = ansi.brightyellow },
-        AlabasterCyan = { fg = ansi.cyan },
-        AlabasterGreen = { fg = ansi.green },
-        AlabasterBrightGreen = { fg = "#60cb00" },
-        AlabasterMagenta = { fg = ansi.magenta },
-        AlabasterRed = { fg = ansi.red },
-        AlabasterWhite = { fg = ansi.black },
-        AlabasterYellow = { fg = ansi.yellow },
+        ["@y9nika.black"] = { fg = ansi.black },
+        ["@y9nika.blue"] = { fg = ansi.blue },
+        ["@y9nika.brightyellow"] = { fg = ansi.brightyellow },
+        ["@y9nika.cyan"] = { fg = ansi.cyan },
+        ["@y9nika.green"] = { fg = ansi.green },
+        ["@y9nika.brightGreen"] = { fg = "#60cb00" },
+        ["@y9nika.magenta"] = { fg = ansi.magenta },
+        ["@y9nika.red"] = { fg = ansi.red },
+        ["@y9nika.white"] = { fg = ansi.black },
+        ["@y9nika.yellow"] = { fg = ansi.yellow },
         --- Hop
         HopNextKey = { fg = ansi.yellow },
         HopNextKey1 = { fg = ansi.blue },
@@ -745,21 +743,21 @@ else
         --- nvim-dap-virtual-text
         NvimDapVirtualText = { bg = "#78D2C9", fg = fg },
         --- Noice
-        NoiceCmdlineIcon = { link = "AlabasterBrightGreen" },
-        NoiceCmdlinePopupBorder = { link = "AlabasterBrightGreen" },
-        NoiceConfirmBorder = { link = "AlabasterBrightGreen" },
-        NoiceCmdlinePopupBorderCmdline = { link = "AlabasterBrightGreen" },
-        NoiceCmdlineIconCmdline = { link = "AlabasterBrightGreen" },
-        NoiceCmdlinePopupBorderFilter = { link = "AlabasterBrightGreen" },
-        NoiceCmdlineIconFilter = { link = "AlabasterBrightGreen" },
-        NoiceCmdlinePopupBorderLua = { link = "AlabasterBrightGreen" },
-        NoiceCmdlineIconLua = { link = "AlabasterBrightGreen" },
-        NoiceCmdlinePopupBorderSearch = { link = "AlabasterYellow" },
-        NoiceCmdlineIconSearch = { link = "AlabasterYellow" },
+        NoiceCmdlineIcon = { link = "@y9nika.brightGreen" },
+        NoiceCmdlinePopupBorder = { link = "@y9nika.brightGreen" },
+        NoiceConfirmBorder = { link = "@y9nika.brightGreen" },
+        NoiceCmdlinePopupBorderCmdline = { link = "@y9nika.brightGreen" },
+        NoiceCmdlineIconCmdline = { link = "@y9nika.brightGreen" },
+        NoiceCmdlinePopupBorderFilter = { link = "@y9nika.brightGreen" },
+        NoiceCmdlineIconFilter = { link = "@y9nika.brightGreen" },
+        NoiceCmdlinePopupBorderLua = { link = "@y9nika.brightGreen" },
+        NoiceCmdlineIconLua = { link = "@y9nika.brightGreen" },
+        NoiceCmdlinePopupBorderSearch = { link = "@y9nika.yellow" },
+        NoiceCmdlineIconSearch = { link = "@y9nika.yellow" },
         -- Languages
         --- asm
         asmDirective = { fg = dim_comment },
-        nasmLabel = { link = "@AlabasterDefinition" },
+        nasmLabel = { link = "@y9nika.definition" },
     }
 end
 
