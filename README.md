@@ -32,12 +32,12 @@ variables and constants are all highlighted using `@y9nika.local`.
 Definition is something that is defined within namespace and is attached to it,
 rather than to scope. They are more important and therefore more noticeable.
 Functions, classes, interfaces, global variables, it all falls under that
-category.
+category and highlighted using `@y9nika.definition`.
 
 And comments are just... Comments. There is a trend to dim comments in nearly
 every colorscheme. In my opinion if author of the original code wanted to say
 you something, it should be noticeable. Perhaps that is the most important and
-high-level information.
+high-level information. It is highlighted using `@y9nika.comment`.
 
 Additionally:
 
