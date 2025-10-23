@@ -86,6 +86,10 @@ colorscheme y9nika
 Supported languages:
 
 - [x] Kotlin
+- [x] Lua
+
+Other languages have sensible defaults thanks to Neovim builtin queries, but
+they might not be polished and something may be highlighted poorly.
 
 ## Configuration
 
