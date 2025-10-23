@@ -31,14 +31,14 @@ if vim.o.background == "dark" then
     local muted_fg = "#aaaaaa"
     local def_fg = "#71ade7"
     local const_fg = "#95cb82"
+    local comment = "#dfdf8e"
     local active = "#cd974b"
     local string_fg = "#95cb82"
     local darker_fg = "#7d7d7d"
     local diffadd = const_fg
     local diffdelete = muted_fg
-    local diffchange = "#bbbb66"
+    local diffchange = comment
     local statusline = "#162022"
-    local comment = "#dfdf8e"
     local dim_comment = "#696969"
     local mistake = {
         fg = "#c33c33",
@@ -73,9 +73,15 @@ if vim.o.background == "dark" then
         ["@y9nika.marker"] = { fg = comment_fg },
         ["@y9nika.declaration"] = { fg = def_fg },
         ["@y9nika.muted"] = { fg = muted_fg },
-        ["@y9nika.highlight"] = { bg = "#6a6a2a" },
-        ["@y9nika.positive"] = { fg = "#95cb82" },
-        ["@y9nika.negative"] = { fg = "#dfdf8e" },
+        ["@y9nika.positive"] = { fg = const_fg, bg = "#1a2a18" },
+        ["@y9nika.positive.foreground"] = { fg = const_fg },
+        ["@y9nika.positive.background"] = { bg = "#1a2a18" },
+        ["@y9nika.negative"] = { fg = muted_fg, bg = "#2a2a2a" },
+        ["@y9nika.negative.foreground"] = { fg = muted_fg },
+        ["@y9nika.negative.background"] = { bg = "#2a2a2a" },
+        ["@y9nika.highlight"] = { fg = comment_fg, bg = "#3f3f28" },
+        ["@y9nika.highlight.foreground"] = { fg = comment_fg },
+        ["@y9nika.highlight.background"] = { bg = "#3f3f28" },
         -- Base
         ["@function"] = { link = "@y9nika.base" },
         ["@variable"] = { link = "@y9nika.base" },
@@ -98,10 +104,10 @@ if vim.o.background == "dark" then
         Comment = { link = "@y9nika.marker" },
         -- ["@local.definition"] = { link = "@y9nika.declaration" },
         -- UI
-        Search = { link = "@y9nika.highlight" },
+        Search = { link = "@y9nika.highlight.background" },
+        CurSearch = { link = "@y9nika.highlight" },
         Visual = { link = "Search" },
         IncSearch = { link = "Search" },
-        CurSearch = { link = "Search" },
         -- New Code Ended
         Function = { link = "@y9nika.declaration" },
         ColorColumn = { bg = "#182325" },
@@ -112,14 +118,14 @@ if vim.o.background == "dark" then
         CursorColumn = { bg = "#182325" },
         CursorLine = { bg = "#182325" },
         Directory = { fg = ansi.blue },
-        DiffAdd = { link = "@y9nika.positive" },
+        DiffAdd = { link = "@y9nika.positive.background" },
         DiffDelete = { link = "@y9nika.negative" },
-        DiffChange = { fg = diffchange },
-        DiffText = { fg = "#341a00", bg = "#fff987" },
+        DiffChange = { link = "@y9nika.positive.background" },
+        DiffText = { link = "@y9nika.highlight" },
         EndOfBuffer = { fg = "#354c50" },
         -- TermCursor   { }, -- cursor in a focused terminal
         TermCursorNC = { fg = bg, bg = fg },
-        ErrorMsg = { link = "@y9nika.negative" },
+        ErrorMsg = { link = "@y9nika.highlight.foreground" },
         VertSplit = { fg = "#2b3d40" },
         Folded = { bg = "#182325", fg = "#7d7d7d" },
         FoldColumn = { bg = bg, fg = "#4d4d4d" },
@@ -175,7 +181,7 @@ if vim.o.background == "dark" then
         -- ("Ignore", below, may be invisible...)
         -- Ignore         { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
-        Error = { link = "@y9nika.negative" },
+        Error = { link = "@y9nika.highlight.foreground" },
 
         Todo = { bg = "#d0d058", fg = bg },
 
@@ -187,7 +193,7 @@ if vim.o.background == "dark" then
         LspCodeLensSeparator = { fg = "#5c5c5c" },
 
         --- Diagnostic
-        DiagnosticError = { link = "@y9nika.negative" },
+        DiagnosticError = { link = "@y9nika.highlight.foreground" },
         DiagnosticWarn = { fg = warn },
         DiagnosticHint = { fg = hint },
         DiagnosticInfo = { fg = info },
@@ -196,7 +202,7 @@ if vim.o.background == "dark" then
         DiagnosticVirtualTextHint = { bg = "#1D2B37", fg = "#7E9CB9" },
         DiagnosticVirtualTextInfo = { bg = "#162C0B", fg = "#7BAC62" },
 
-        ["@error"] = { link = "@y9nika.negative" },
+        ["@error"] = { link = "@y9nika.highlight.foreground" },
         ["@tag.delimiter"] = { fg = muted_fg },
         ["@text.note"] = { bg = "#1d292b", fg = ansi.blue },
         ["@text.warning"] = { bg = "#d0d058", fg = bg },
@@ -332,15 +338,15 @@ else
     local muted_fg = "#666666"
     local def_fg = "#325cc0"
     local const_fg = "#448c27"
+    local comment = "#aa3731"
     local active = "#ffbc5d"
     local active_blue = "#007acc"
     local string_fg = "#448c27"
     local darker_fg = "#7d7d7d"
     local diffadd = const_fg
-    local diffdelete = "#dd3232"
-    local diffchange = "#d19a66"
+    local diffdelete = muted_fg
+    local diffchange = comment
     local statusline = "#c9c9c9"
-    local comment = "#aa3731"
     local dim_comment = "#696969"
     local mistake = {
         fg = "#c33c33",
@@ -375,9 +381,15 @@ else
         ["@y9nika.marker"] = { fg = comment_fg },
         ["@y9nika.declaration"] = { fg = def_fg },
         ["@y9nika.muted"] = { fg = muted_fg },
-        ["@y9nika.highlight"] = { bg = "#f0dddd" },
-        ["@y9nika.positive"] = { fg = "#448c27" },
-        ["@y9nika.negative"] = { fg = "#aa3731" },
+        ["@y9nika.positive"] = { fg = const_fg, bg = "#e6f2e3" },
+        ["@y9nika.positive.foreground"] = { fg = const_fg },
+        ["@y9nika.positive.background"] = { bg = "#e6f2e3" },
+        ["@y9nika.negative"] = { fg = muted_fg, bg = "#e8e8e8" },
+        ["@y9nika.negative.foreground"] = { fg = muted_fg },
+        ["@y9nika.negative.background"] = { fg = "#e8e8e8" },
+        ["@y9nika.highlight"] = { fg = comment_fg, bg = "#f9e6e5" },
+        ["@y9nika.highlight.foreground"] = { fg = comment_fg },
+        ["@y9nika.highlight.background"] = { bg = "#f9e6e5" },
         -- Base
         ["@function"] = { link = "@y9nika.base" },
         ["@variable"] = { link = "@y9nika.base" },
@@ -400,10 +412,10 @@ else
         Comment = { link = "@y9nika.marker" },
         -- UI
         --- Search
-        Search = { link = "@y9nika.highlight" },
+        Search = { link = "@y9nika.highlight.background" },
+        CurSearch = { link = "@y9nika.highlight" },
         Visual = { link = "Search" },
         IncSearch = { link = "Search" },
-        CurSearch = { link = "Search" },
         -- New Code Ended
         Function = { link = "@y9nika.declaration" },
         ColorColumn = { bg = "#E2EEEE" },
@@ -414,14 +426,14 @@ else
         CursorColumn = { bg = "#E2EEEE" },
         CursorLine = { bg = "#E2EEEE" },
         Directory = { fg = ansi.blue },
-        DiffAdd = { link = "@y9nika.positive" },
+        DiffAdd = { link = "@y9nika.positive.background" },
         DiffDelete = { link = "@y9nika.negative" },
-        DiffChange = { fg = diffchange },
-        DiffText = { fg = "#fff987", bg = "#876004" },
+        DiffChange = { link = "@y9nika.positive.background" },
+        DiffText = { link = "@y9nika.highlight" },
         EndOfBuffer = { fg = "#b6b6b6" },
         -- TermCursor   { }, -- cursor in a focused terminal
         TermCursorNC = { fg = bg, bg = fg },
-        ErrorMsg = { link = "@y9nika.negative" },
+        ErrorMsg = { link = "@y9nika.highlight.foreground" },
         VertSplit = { fg = "#abbdc0" },
         Folded = { bg = "#dddddd", fg = "#7d7d7d" },
         FoldColumn = { bg = bg, fg = "#4d4d4d" },
@@ -483,7 +495,7 @@ else
         -- ("Ignore", below, may be invisible...)
         -- Ignore         { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
-        Error = { link = "@y9nika.negative" },
+        Error = { link = "@y9nika.highlight.foreground" },
 
         Todo = { bg = "#FFDEAA", fg = ansi.blue },
 
@@ -495,7 +507,7 @@ else
         LspCodeLensSeparator = { fg = "#999999" },
 
         --- Diagnostic
-        DiagnosticError = { link = "@y9nika.negative" },
+        DiagnosticError = { link = "@y9nika.highlight.foreground" },
         DiagnosticWarn = { fg = warn },
         DiagnosticHint = { fg = hint },
         DiagnosticInfo = { fg = info },
@@ -504,7 +516,7 @@ else
         DiagnosticVirtualTextHint = { fg = "#0F171D", bg = "#C3D0DA" },
         DiagnosticVirtualTextInfo = { bg = "#ADFFB7", fg = "#042F09" },
 
-        ["@error"] = { link = "@y9nika.negative" },
+        ["@error"] = { link = "@y9nika.highlight.foreground" },
         ["@tag.delimiter"] = { fg = muted_fg },
         ["@text.note"] = { bg = "#dddddd", fg = ansi.blue },
         ["@text.warning"] = { bg = "#FFDEAA", fg = ansi.blue },

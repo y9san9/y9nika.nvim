@@ -87,6 +87,10 @@ Supported languages:
 
 - [x] Kotlin
 - [x] Lua
+- [x] VimScript
+- [x] Markdown
+- [x] Json
+- [x] Git
 
 Other languages have sensible defaults thanks to Neovim builtin queries, but
 they might not be polished and something may be highlighted poorly.
