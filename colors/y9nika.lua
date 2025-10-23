@@ -80,6 +80,8 @@ if vim.o.background == "dark" then
         ["@function"] = { link = "@y9nika.base" },
         ["@variable"] = { link = "@y9nika.base" },
         ["@property"] = { link = "@y9nika.base" },
+        ["@type"] = { link = "@y9nika.base" },
+        Special = { link = "@y9nika.base" },
         -- Variables
         ["@string"] = { link = "@y9nika.variable" },
         ["@character"] = { link = "@y9nika.variable" },
@@ -87,8 +89,10 @@ if vim.o.background == "dark" then
         ["@boolean"] = { link = "@y9nika.variable" },
         -- Muted
         ["@keyword"] = { link = "@y9nika.muted" },
-        Special = { link = "@y9nika.muted" },
-        Operator = { fg = muted_fg },
+        ["@punctuation.delimeter"] = { link = "@y9nika.muted" },
+        ["@punctuation.bracket"] = { link = "@y9nika.muted" },
+        ["@punctuation.special"] = { link = "@y9nika.muted" },
+        Operator = { link = "@y9nika.muted" },
         -- Markers
         ["@keyword.return"] = { link = "@y9nika.marker" },
         Comment = { link = "@y9nika.marker" },
@@ -193,9 +197,6 @@ if vim.o.background == "dark" then
         DiagnosticVirtualTextInfo = { bg = "#162C0B", fg = "#7BAC62" },
 
         ["@error"] = { link = "@y9nika.negative" },
-        ["@punctuation.delimiter"] = { fg = muted_fg },
-        ["@punctuation.bracket"] = { fg = muted_fg },
-        ["@punctuation.special"] = { fg = muted_fg },
         ["@tag.delimiter"] = { fg = muted_fg },
         ["@text.note"] = { bg = "#1d292b", fg = ansi.blue },
         ["@text.warning"] = { bg = "#d0d058", fg = bg },
@@ -381,6 +382,8 @@ else
         ["@function"] = { link = "@y9nika.base" },
         ["@variable"] = { link = "@y9nika.base" },
         ["@property"] = { link = "@y9nika.base" },
+        ["@type"] = { link = "@y9nika.base" },
+        Special = { link = "@y9nika.base" },
         -- Variables
         ["@string"] = { link = "@y9nika.variable" },
         ["@character"] = { link = "@y9nika.variable" },
@@ -388,7 +391,9 @@ else
         ["@boolean"] = { link = "@y9nika.variable" },
         -- Muted
         ["@keyword"] = { link = "@y9nika.muted" },
-        Special = { link = "@y9nika.muted" },
+        ["@punctuation.delimeter"] = { link = "@y9nika.muted" },
+        ["@punctuation.bracket"] = { link = "@y9nika.muted" },
+        ["@punctuation.special"] = { link = "@y9nika.muted" },
         Operator = { link = "@y9nika.muted" },
         -- Markers
         ["@keyword.return"] = { link = "@y9nika.marker" },
@@ -500,9 +505,6 @@ else
         DiagnosticVirtualTextInfo = { bg = "#ADFFB7", fg = "#042F09" },
 
         ["@error"] = { link = "@y9nika.negative" },
-        ["@punctuation.delimiter"] = { fg = muted_fg },
-        ["@punctuation.bracket"] = { fg = muted_fg },
-        ["@punctuation.special"] = { fg = muted_fg },
         ["@tag.delimiter"] = { fg = muted_fg },
         ["@text.note"] = { bg = "#dddddd", fg = ansi.blue },
         ["@text.warning"] = { bg = "#FFDEAA", fg = ansi.blue },

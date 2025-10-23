@@ -29,3 +29,9 @@
 (function_declaration
   name: (dot_index_expression
           field: (identifier) @y9nika.declaration))
+
+(table_constructor
+  [
+    "{"
+    "}"
+  ] @punctuation.bracket)
