@@ -4,4 +4,8 @@
 (function_declaration
   name: (identifier) @y9nika.declaration)
 
-(undefined) @y9nika.variable
+[
+  (null)
+  (undefined)
+] @y9nika.variable
+

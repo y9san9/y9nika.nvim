@@ -17,6 +17,13 @@
 
 (multiline_comment) @y9nika.marker
 
+[
+  "continue"
+  "continue@"
+  "break"
+  "break@"
+] @y9nika.marker
+
 (function_declaration
   (simple_identifier) @y9nika.declaration)
 

@@ -86,6 +86,9 @@ colorscheme y9nika
 Supported languages:
 
 - [x] Kotlin
+- [x] Java
+- [x] JavaScript
+- [x] TypeScript
 - [x] Lua
 - [x] VimScript
 - [x] Markdown
