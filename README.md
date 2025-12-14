@@ -70,11 +70,9 @@ Additionally:
 
 ## NOTE
 
-This theme is heavily inspired by alabaster. Not just philosophy. The whole
-implementation was taken from [this
-repository](https://github.com/p00f/alabaster.nvim/). As of now y9nika.nvim has
-some tweaks to the original theme that reduces amount of mental overhead when
-working with code.
+This theme is heavily inspired by
+[alabaster](https://github.com/p00f/alabaster.nvim/). With the difference that I
+reduced the amount of base colors to 6.
 
 ## Usage
 
