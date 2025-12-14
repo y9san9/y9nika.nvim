@@ -114,10 +114,10 @@ M.apply = function(theme)
     -- Accent colors are *pulled toward background*, not crushed in lightness
 
     theme.highlight_background =
-        mix(theme.marker, theme.background, is_dark and 0.80 or 0.85)
+        mix(theme.marker, theme.background, is_dark and 0.75 or 0.80)
 
     theme.positive_background =
-        mix(theme.secondary, theme.background, is_dark and 0.80 or 0.85)
+        mix(theme.secondary, theme.background, is_dark and 0.75 or 0.80)
 
     theme.negative_background =
         mix(theme.muted, theme.background, is_dark and 0.75 or 0.80)

@@ -1,11 +1,16 @@
 # y9nika.nvim
 
+> Colorscheme focused on **declarations** rather than **statements**.
+
 y9nika is my wife's nickname. This repo is a companion theme for my config at
 [y9san9.nvim](https://github.com/y9san9/y9san9.nvim).
 
-| Dark                        | Light                        |
-| --------------------------- | ---------------------------- |
-| ![](assets/kotlin-dark.png) | ![](assets/kotlin-light.png) |
+| Flavor                      | Dark                                   | Light                                   |
+| --------------------------- | -------------------------------------- | --------------------------------------- |
+| <center>Default</center>    | ![](assets/y9nika-dark.png)            | ![](assets/y9nika-light.png)            |
+| <center>Solar</center>      | ![](assets/y9nika-solar-dark.png)      | ![](assets/y9nika-solar-light.png)      |
+| <center>Contrast</center>   | ![](assets/y9nika-contrast-dark.png)   | ![](assets/y9nika-contrast-light.png)   |
+| <center>Monoaccent</center> | ![](assets/y9nika-monoaccent-dark.png) | ![](assets/y9nika-monoaccent-light.png) |
 
 ## Motivation
 
@@ -98,6 +103,18 @@ they might not be polished and something may be highlighted poorly.
 
 ## Configuration
 
-No custom configuration is supported by design. It is an opinionated theme,
-either make your fork or open an issue.
+It is easy to create custom theme via this "framework". Each flavor has just 6
+colors to override. Take a look at the default theme definition, for example:
 
+```lua
+require("y9nika.core").apply {
+    background = "#0e1415",
+    foreground = "#dddddd",
+    primary = "#71ade7",
+    secondary = "#95cb82",
+    muted = "#aaaaaa",
+    marker = "#dfdf8e",
+}
+```
+
+The rest is derived programmatically using some HUE-magic.
