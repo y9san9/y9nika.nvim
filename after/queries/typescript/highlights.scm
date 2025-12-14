@@ -17,4 +17,7 @@
 (type_alias_declaration
   name: (type_identifier) @y9nika.declaration)
 
-(undefined) @y9nika.variable
+[
+  (null)
+  (undefined)
+] @y9nika.variable

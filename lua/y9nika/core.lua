@@ -151,8 +151,8 @@ M.apply = function(theme)
 
     local highlights = {
         ["@y9nika.base"]        = { fg = theme.foreground },
-        ["@y9nika.variable"]    = { fg = theme.secondary },
         ["@y9nika.declaration"] = { fg = theme.primary },
+        ["@y9nika.variable"]    = { fg = theme.secondary },
         ["@y9nika.marker"]      = { fg = theme.marker },
         ["@y9nika.muted"]       = { fg = theme.muted },
 
@@ -214,8 +214,8 @@ M.apply = function(theme)
         Directory    = { link = "@y9nika.declaration" },
 
         Search       = { bg = theme.negative_background },
-        IncSearch    = { bg = theme.highlight_background },
-        CurSearch    = { bg = theme.highlight_background },
+        IncSearch    = { link = "@y9nika.highlight" },
+        CurSearch    = { link = "@y9nika.highlight" },
         Visual       = { bg = theme.highlight_background },
 
         StatusLine   = { fg = theme.foreground, bg = theme.background_dim },
@@ -239,6 +239,7 @@ M.apply = function(theme)
     end
 end
 
+-- While in development, :source for this file works
 if vim.o.background == "light" then
     M.apply {
         background = "#f7f7f7",
