@@ -11,6 +11,7 @@ y9nika is my wife's nickname. This repo is a companion theme for my config at
 | <center>Solar</center>      | ![](assets/y9nika-solar-dark.png)      | ![](assets/y9nika-solar-light.png)      |
 | <center>Contrast</center>   | ![](assets/y9nika-contrast-dark.png)   | ![](assets/y9nika-contrast-light.png)   |
 | <center>Monoaccent</center> | ![](assets/y9nika-monoaccent-dark.png) | ![](assets/y9nika-monoaccent-light.png) |
+| <center>Pickme</center>     | ![](assets/y9nika-pickme-dark.png)     | ![](assets/y9nika-pickme-light.png)     |
 
 ## Motivation
 
