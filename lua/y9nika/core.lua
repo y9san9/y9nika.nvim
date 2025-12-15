@@ -148,6 +148,21 @@ M.apply = function(theme)
     vim.g.terminal_color_15 = adjust_hsl(theme.foreground, 0, 0, is_dark and 0.15 or -0.15)
 
     -- =========================
+    -- Disable LSP semantic tokens
+    -- =========================
+
+    local augroup = vim.api.nvim_create_augroup("Y9nikaLSP", { clear = true })
+    vim.api.nvim_create_autocmd("LspAttach", {
+        group = augroup,
+        callback = function(ev)
+            local client = vim.lsp.get_client_by_id(ev.data.client_id)
+            if client then
+                client.server_capabilities.semanticTokensProvider = nil
+            end
+        end,
+    })
+
+    -- =========================
     -- Highlights
     -- =========================
 
