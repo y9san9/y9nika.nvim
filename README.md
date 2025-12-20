@@ -91,6 +91,7 @@ colorscheme y9nika
 Supported languages:
 
 - [x] Kotlin
+- [x] Swift
 - [x] Java
 - [x] JavaScript
 - [x] TypeScript
