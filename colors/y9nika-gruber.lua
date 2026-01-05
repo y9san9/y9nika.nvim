@@ -4,10 +4,9 @@
 
 vim.cmd("hi clear")
 
--- This colorscheme relies on treesitter highlighting only
--- I may inlcude the support 'vim highlighting' if someone wants to become a
--- contributor. I can't test or find bugs and I turned off 'vim highlighting'
--- in my config.
+-- This colorscheme relies on treesitter highlighting only. I may inlcude the
+-- support for 'vim highlighting' if someone wants to become a contributor. I
+-- can't test or find bugs and I turned off 'vim highlighting' in my config.
 vim.cmd("syntax off")
 
 vim.o.background = "dark"
