@@ -3,9 +3,12 @@
 ---
 
 vim.cmd("hi clear")
-if vim.fn.exists("syntax_on") == 1 then
-    vim.cmd("syntax reset")
-end
+
+-- This colorscheme relies on treesitter highlighting only
+-- I may inlcude the support 'vim highlighting' if someone wants to become a
+-- contributor. I can't test or find bugs and I turned off 'vim highlighting'
+-- in my config.
+vim.cmd("syntax off")
 
 vim.o.background = "dark"
 vim.g.colors_name = "y9nika-gruber"
