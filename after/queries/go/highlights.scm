@@ -18,6 +18,11 @@
   (var_spec
     name: (identifier) @y9nika.variable))
 
+(var_declaration
+  (var_spec_list
+    (var_spec
+      name: (identifier) @y9nika.variable)))
+
 (const_declaration
   (const_spec
     name: (identifier) @y9nika.variable))
