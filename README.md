@@ -96,6 +96,7 @@ Supported languages:
 - [x] Java
 - [x] JavaScript
 - [x] TypeScript
+- [x] Go
 - [x] Lua
 - [x] VimScript
 - [x] Markdown
@@ -103,7 +104,8 @@ Supported languages:
 - [x] Git
 
 Other languages have sensible defaults thanks to Neovim builtin queries, but
-they might not be polished and something may be highlighted poorly.
+they might not be polished and something may be highlighted poorly. You can
+learn specifically what needs to be adjusted [here](TODO.md).
 
 ## Configuration
 
