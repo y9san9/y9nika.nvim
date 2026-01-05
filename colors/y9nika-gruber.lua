@@ -19,5 +19,5 @@ require("y9nika.core").apply {
     primary    = "#96a6c8",
     secondary  = "#73c936",
     muted      = "#ffdd33",
-    marker     = "#f43841",
+	marker     = "#ff9000",
 }
