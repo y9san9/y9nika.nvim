@@ -29,3 +29,7 @@
 
 (field_declaration
     name: (field_identifier) @y9nika.variable)
+
+(parameter_list
+  (parameter_declaration
+    name: (identifier) @y9nika.variable))
