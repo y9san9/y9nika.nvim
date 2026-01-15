@@ -17,6 +17,19 @@
 (type_alias_declaration
   name: (type_identifier) @y9nika.declaration)
 
+(variable_declarator
+  name: (array_pattern
+    (identifier) @y9nika.variable))
+
+(variable_declarator
+  name: (object_pattern
+    (shorthand_property_identifier_pattern) @y9nika.variable))
+
+(variable_declarator
+  name: (object_pattern
+    (pair_pattern
+      key: (property_identifier) @y9nika.variable)))
+
 [
   (null)
   (undefined)
