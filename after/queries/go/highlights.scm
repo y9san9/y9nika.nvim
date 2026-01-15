@@ -23,6 +23,10 @@
     (var_spec
       name: (identifier) @y9nika.variable)))
 
+(short_var_declaration
+  left: (expression_list
+    (identifier) @y9nika.variable))
+
 (const_declaration
   (const_spec
     name: (identifier) @y9nika.variable))
