@@ -97,6 +97,7 @@ Supported languages:
 - [x] JavaScript
 - [x] TypeScript
 - [x] CSS
+- [x] HTML
 - [x] Go
 - [x] Lua
 - [x] VimScript
