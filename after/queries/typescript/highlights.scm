@@ -33,6 +33,9 @@
     (pair_pattern
       key: (property_identifier) @y9nika.variable)))
 
+(property_signature
+    name: (property_identifier) @y9nika.variable)
+
 [
   (null)
   (undefined)
