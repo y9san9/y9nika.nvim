@@ -18,6 +18,9 @@
   name: (type_identifier) @y9nika.declaration)
 
 (variable_declarator
+  name: (identifier) @y9nika.variable)
+
+(variable_declarator
   name: (array_pattern
     (identifier) @y9nika.variable))
 
