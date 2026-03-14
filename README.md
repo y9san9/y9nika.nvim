@@ -91,15 +91,16 @@ colorscheme y9nika
 
 Supported languages:
 
+- [x] Lua
+- [x] Go
+- [x] Python
 - [x] Kotlin
-- [x] Swift
 - [x] Java
+- [x] Swift
 - [x] JavaScript
 - [x] TypeScript
 - [x] CSS
 - [x] HTML
-- [x] Go
-- [x] Lua
 - [x] VimScript
 - [x] Markdown
 - [x] Json

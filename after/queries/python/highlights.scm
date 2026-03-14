@@ -3,6 +3,7 @@
 
 (function_definition
   name: (identifier) @y9nika.declaration)
+
 (class_definition
   name: (identifier) @y9nika.declaration)
 
