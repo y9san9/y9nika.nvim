@@ -37,3 +37,5 @@
 (parameter_list
   (parameter_declaration
     name: (identifier) @y9nika.variable))
+
+(rune_literal) @y9nika.variable
