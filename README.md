@@ -94,6 +94,7 @@ Supported languages:
 - [x] Lua
 - [x] Go
 - [x] Python
+- [x] Julia
 - [x] Kotlin
 - [x] Java
 - [x] Swift
