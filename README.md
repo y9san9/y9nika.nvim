@@ -104,6 +104,7 @@ Supported languages:
 - [x] HTML
 - [x] VimScript
 - [x] Markdown
+- [x] Odin
 - [x] Json
 - [x] Git
 
