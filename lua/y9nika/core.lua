@@ -224,6 +224,23 @@ M.apply = function(theme)
         Boolean             = { link = "@y9nika.variable" },
         Keyword             = { link = "@y9nika.muted" },
 
+        -- Neovim provides no default for @markup.raw, so code rendered as
+        -- plain text. Inline spans were invisible with conceallevel=2, which
+        -- hides the backticks as well.
+        --
+        -- Fenced blocks are captured as @markup.raw.block and inherit this
+        -- through treesitter's fallback, colouring the fences to match. The
+        -- markdown query gives the block priority 90, below the 100 an
+        -- injection carries, so a tagged block still reads as its own
+        -- language and only an untagged one takes the colour throughout.
+        ["@markup.raw"] = { link = "@y9nika.variable" },
+
+        -- The language annotation after the opening fence. Suffixing with the
+        -- language confines this to Markdown info strings, leaving @label in
+        -- code alone. Without it the annotation falls back to Neovim's own
+        -- Statement, which is neither a palette colour nor free of bold.
+        ["@label.markdown"] = { link = "@y9nika.base" },
+
         Function     = { link = "@y9nika.base" },
         Type         = { link = "@y9nika.base" },
         PreProc      = { link = "@y9nika.base" },
