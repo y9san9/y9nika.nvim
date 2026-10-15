@@ -129,3 +129,25 @@ require("y9nika.core").apply {
 ```
 
 The rest is derived programmatically using some HUE-magic.
+
+The terminal palette (`g:terminal_color_0..15`) is also derived: black, white,
+green, blue and magenta come from the theme keys, while the hues the keys carry
+no counterpart for (red, yellow, cyan) are fixed per ground, because
+command-line programs render status backgrounds on those slots — composer's
+black-on-yellow warnings and phpunit's white-on-red failure summaries, for
+example. A flavour that wants exact hues can pass hex values per ground through
+`ansi`, indexed 0–15; any slot it leaves out keeps the derived value:
+
+```lua
+require("y9nika.core").apply {
+    background = "#0e1415",
+    foreground = "#dddddd",
+    primary = "#71ade7",
+    secondary = "#95cb82",
+    muted = "#aaaaaa",
+    marker = "#dfdf8e",
+    ansi = {
+        dark = { [1] = "#e0212f" },
+    },
+}
+```
