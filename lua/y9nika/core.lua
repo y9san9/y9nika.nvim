@@ -137,15 +137,49 @@ M.apply = function(theme)
     -- Terminal colors
     -- =========================
 
-    vim.g.terminal_color_0  = adjust_hsl(theme.background, 0, 0, is_dark and -0.35 or -0.25)
-    vim.g.terminal_color_1  = theme.marker
-    vim.g.terminal_color_2  = theme.secondary
-    vim.g.terminal_color_3  = adjust_hsl(theme.secondary, 0.10, 0, 0)
-    vim.g.terminal_color_4  = theme.primary
-    vim.g.terminal_color_5  = adjust_hsl(theme.primary, 0.15, 0, 0)
-    vim.g.terminal_color_6  = adjust_hsl(theme.secondary, -0.10, 0, 0)
-    vim.g.terminal_color_7  = theme.foreground
-    vim.g.terminal_color_15 = adjust_hsl(theme.foreground, 0, 0, is_dark and 0.15 or -0.15)
+    -- The console palette needs true red, yellow and cyan, and the six code
+    -- keys carry none of those hues: hue-shifting secondary — the previous
+    -- derivation for red and yellow — lands on green and olive. Command-line
+    -- programs paint solid backgrounds on these slots (composer's
+    -- black-on-yellow warnings, phpunit's white-on-red failure and error
+    -- summaries), so an off-hue slot renders those pairings off-colour, and
+    -- with red as pale as the foreground as white-on-pale, unreadable. The
+    -- off-palette hues are therefore fixed per ground; black, white, green,
+    -- blue and magenta stay derived from the theme, bright steps lighten
+    -- their base hue, and a flavour that wants exact hues can pass hex
+    -- values per ground through `theme.ansi`.
+    local ansi = (theme.ansi or {})[is_dark and "dark" or "light"]
+    local base = {
+        [0] = adjust_hsl(theme.background, 0, 0, is_dark and -0.35 or -0.25),
+        [1] = is_dark and "#d15454" or "#c33123",
+        [2] = theme.secondary,
+        [3] = is_dark and "#dfdf8e" or "#8a5300",
+        [4] = theme.primary,
+        [5] = adjust_hsl(theme.primary, 0.15, 0, 0),
+        [6] = is_dark and "#70c0c8" or "#005e8b",
+        [7] = theme.foreground,
+        [8] = mix(theme.foreground, theme.background, 0.55),
+    }
+
+    for index = 0, 8 do
+        local value = base[index]
+
+        if ansi and ansi[index] then
+            value = ansi[index]
+        end
+
+        vim.g["terminal_color_" .. index] = value
+    end
+
+    for index = 9, 15 do
+        local value = adjust_hsl(base[index - 8], 0, 0, is_dark and 0.12 or -0.12)
+
+        if ansi and ansi[index] then
+            value = ansi[index]
+        end
+
+        vim.g["terminal_color_" .. index] = value
+    end
 
     -- =========================
     -- Disable LSP semantic tokens
