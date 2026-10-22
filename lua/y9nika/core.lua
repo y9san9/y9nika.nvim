@@ -206,6 +206,16 @@ M.apply = function(theme)
         DiffChange  = { link = "@y9nika.positive.background" },
         DiffText    = { link = "@y9nika.highlight" },
 
+        -- Legacy semantic groups that plugins read from directly to derive
+        -- their own palette, such as orgmode.nvim: its agenda colours come
+        -- from `Error`, `WarningMsg` and `diffAdded`. Without these they
+        -- inherit Neovim's defaults, which do not match the theme's
+        -- semantic colours.
+        Error       = { link = "@y9nika.marker" },
+        ErrorMsg    = { link = "@y9nika.marker" },
+        WarningMsg  = { link = "@y9nika.marker" },
+        diffAdded   = { link = "@y9nika.variable" },
+
         DiagnosticInfo  = { fg = theme.foreground },
         DiagnosticWarn  = { fg = theme.warning },
         DiagnosticError = { fg = theme.error },
